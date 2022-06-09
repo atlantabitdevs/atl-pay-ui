@@ -8,9 +8,9 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Deals />} />
-                <Route path="/" element={<Form />} />
-                <Route path="/" element={<PaymentSchedule />} />
-                <Route path="/" element={<Invoice />} />
+                <Route path="/form" element={<Form />} />
+                <Route path="/schedule" element={<PaymentSchedule />} />
+                <Route path="/invoice" element={<Invoice />} />
             </Routes>
         </BrowserRouter>
     );
