@@ -35,8 +35,11 @@ export const Invoice = () => {
     if (loading) {
         console.log("Loading");
         return (
-            <div>
-                <p>Spinning</p>
+            <div className="h-full flex flex-col space-y-8 justify-center items-center p-16">
+                <div className="text-center text-2xl">
+                    <img src="bitcoin.svg" alt="" className="animate-bounce block mx-auto" />
+                    <p>One moment, electrifying&hellip;</p>
+                </div>
             </div>
         );
     }
