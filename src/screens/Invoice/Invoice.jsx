@@ -10,14 +10,12 @@ export const Invoice = () => {
     let navigate = useNavigate();
     let store = useStore((state) => state);
     const [loading, setLoading] = useState(true);
-    const [invoiceString, setInvoiceString] = useState();
+    const [invoiceString, setInvoiceString] = useState('');
 
     let URL = "http://localhost:4000/api/v1/terminus/signup";
 
     // Pending or successful invoice
     const [success, setSuccess] = useState(false);
-    let successClasses = success ? "success" : "hidden";
-    let pendingClasses = !success ? "pending" : "hidden";
 
     useEffect(() => {
         const sendRequest = async () => {
