@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "@mui/material";
+import { Button } from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import { StatusBar } from "../../components/StatusBar";
 import QRCode from "react-qr-code";
@@ -13,6 +13,11 @@ export const Invoice = () => {
     const [invoiceString, setInvoiceString] = useState();
 
     let URL = "http://localhost:4000/api/v1/terminus/signup";
+
+    // Pending or successful invoice
+    const [success, setSuccess] = useState(false);
+    let successClasses = success ? "success" : "hidden";
+    let pendingClasses = !success ? "pending" : "hidden";
 
     useEffect(() => {
         const sendRequest = async () => {
@@ -43,38 +48,61 @@ export const Invoice = () => {
             </div>
         );
     }
+    else if(success) {
+        return(
+            <div className="page">
+                <h2 className="text-4xl text-center">BOOM! We received your payment.</h2>
 
-    return (
-        <div className="page">
-            <h2 className="text-4xl text-center">Ok! It's time to checkout.</h2>
+                <div className="flex flex-col space-y-8 justify-center items-center">
+                    <p className="text-center text-xl">Look at that electric money zip into our computer!</p>
 
-            <div className="flex flex-col space-y-8 justify-center items-center">
-                <div style={{ background: "white", padding: "16px" }}>
-                    <QRCode value={invoiceString} level="M" />
+                    <div className="flex flex-col space-y-8 justify-center items-center">
+                        <iframe src="https://giphy.com/embed/fimJbiI2SiGx5JfOyP" width="480" height="360" frameBorder="0"
+                                className="giphy-embed" allowFullScreen></iframe>
+                    </div>
+
+                    <br />
+
+                    <p className="text-center text-xl mt">Alright, let's get back to working on bitcoin now.</p>
                 </div>
 
-                <Button
-                    onClick={() => {
-                        navigate("/");
-                    }}
-                >
-                    <span>Copy Offer</span>
-                    <CopyIcon className="w-8 h-8" />
-                </Button>
-
-                <div className="flex flex-col space-y-2 justify-center items-center">
-                    <h3 className="text-2xl font-bold">Membership Details</h3>
-
-                    <ul className="text-xl space-y-2 text-center">
-                        <li>{store.deal.text}</li>
-                        <li>{store.form.nim}</li>
-                        <li>{store.form.email}</li>
-                        <li>{store.paymentSchedule.description}</li>
-                    </ul>
-                </div>
+                <StatusBar current={"Checkout"} />
             </div>
+        );
+    }
+    else {
+        return (
+            <div className="page">
+                <h2 className="text-4xl text-center">Ok! It's time to checkout.</h2>
 
-            <StatusBar current={"Checkout"} />
-        </div>
-    );
+                <div className="flex flex-col space-y-8 justify-center items-center">
+                    <div style={{ background: "white", padding: "16px" }}>
+                        <QRCode value={invoiceString} level="M" />
+                    </div>
+
+                    <Button
+                        onClick={() => {
+                            navigate("/");
+                        }}
+                    >
+                        <span>Copy Offer</span>
+                        <CopyIcon className="w-8 h-8" />
+                    </Button>
+
+                    <div className="flex flex-col space-y-2 justify-center items-center">
+                        <h3 className="text-2xl font-bold">Membership Details</h3>
+
+                        <ul className="text-xl space-y-2 text-center">
+                            <li>{store.deal.text}</li>
+                            <li>{store.form.nim}</li>
+                            <li>{store.form.email}</li>
+                            <li>{store.paymentSchedule.description}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <StatusBar current={"Checkout"} />
+            </div>
+        );
+    }
 };
