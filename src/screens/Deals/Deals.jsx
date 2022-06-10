@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Card } from "../../components/index";
 import "./Deals.css";
 import { useStore } from "../../zustand/store";
+import {BitcoinCircleIcon} from '@bitcoin-design/bitcoin-icons-react/outline';
 
 export const Deals = () => {
     let navigate = useNavigate();
@@ -47,7 +48,7 @@ export const Deals = () => {
             </Button>
           
           
-          <p className="text-6xl">Tailwind Test</p>
+          <p className="text-6xl">Tailwind Test <BitcoinCircleIcon className="w-20 h-20" /></p>
         </div>
     );
 };
