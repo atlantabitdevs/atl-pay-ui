@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Card } from "../../components/index";
 import "./Deals.css";
 import { useStore } from "../../zustand/store";
-import {BitcoinCircleIcon} from '@bitcoin-design/bitcoin-icons-react/outline';
+import {BitcoinCircleIcon, ArrowRightIcon} from '@bitcoin-design/bitcoin-icons-react/outline';
+import {Button} from '../../components/Button';
 
 export const Deals = () => {
     let navigate = useNavigate();
@@ -36,19 +36,15 @@ export const Deals = () => {
             <div className="dealsContainer">
                 <DisplayDeals />
             </div>
-            <Button
-                variant="contained"
-                onClick={() => {
-                    navigate("/form");
-                }}
-                color="warning"
-                className="deals-btn"
-            >
-                Continue
-            </Button>
-          
-          
-          <p className="text-6xl">Tailwind Test <BitcoinCircleIcon className="w-20 h-20" /></p>
+          <Button
+            onClick={() => {
+              navigate("/form");
+            }}
+            disabled={!store.deal}
+          >
+            <span>Continue</span>
+            <ArrowRightIcon className="w-8 h-8" />
+          </Button>
         </div>
     );
 };

@@ -8,7 +8,13 @@ module.exports = {
       'body': ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       'sans': ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        'term-orange': '#ff9500',
+        'term-orange-hover': '#FFB54C',
+        'term-orange-disabled': '#B87B26'
+      }
+    },
   },
   plugins: [],
 }
