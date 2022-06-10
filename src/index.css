@@ -11,3 +11,8 @@ body, html, #root {
 .status-bar .current {
     @apply text-black;
 }
+
+.computers {
+    background-image: url('../public/computers-bg.jpg');
+    @apply bg-center bg-no-repeat bg-cover;
+}
