@@ -1,4 +1,4 @@
-export const StatusBar = () => {
+export const StatusBar = (props) => {
   return(
     <div className="status-bar">
       <ol className="flex flex-row space-x-12 text-lg text-term-gray list-decimal">

@@ -1,17 +1,25 @@
 import React from "react";
 import "./Card.css";
-import { Box, Button, Paper } from "@mui/material";
+import {Button} from "../Button";
 
 export const Card = (props) => {
     return (
-      <div className="border-4 border-black border-solid">
-        <Paper className="Card">
-            <Box className="container">
-                <img
-                    className="card-image"
-                    src="https://coworkingmag.com/wp-content/uploads/2021/05/Coworking-space-austin-feature.png"
-                />
-                <p className="card-text">{props.deal.text}</p>
+        <div className="border-4 border-black border-solid">
+            <img
+                className="w-full"
+                src={props.deal.imageSrc}
+                alt=""
+            />
+            <div className="flex flex-col space-y-4 p-12">
+                
+                <h3 className="text-4xl text-center">{props.deal.text}</h3>
+          
+                <ol className="text-2xl list-disc">
+                    {props.deal.descriptions.map((description)=> (
+                        <li>{description}</li>
+                    ))}
+                </ol>
+          
                 <p className="card-text">${props.deal.price}</p>
                 <Button
                     variant="contained"
@@ -21,8 +29,7 @@ export const Card = (props) => {
                 >
                     Select
                 </Button>
-            </Box>
-        </Paper>
-      </div>
+            </div>
+        </div>
     );
 };
