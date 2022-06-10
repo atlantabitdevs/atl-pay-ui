@@ -1,9 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Card } from "../../components/index";
 import "./Welcome.css";
-
-import { ArrowRightIcon } from "@bitcoin-design/bitcoin-icons-react/outline";
 import { Button } from "../../components/Button";
 
 export const Welcome = () => {

@@ -2,7 +2,6 @@ import { Button } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { StatusBar } from "../../components/StatusBar";
-import ReactDOM from "react-dom";
 import QRCode from "react-qr-code";
 
 export const Invoice = () => {
