@@ -4,6 +4,10 @@ Terminus Pay is a recurring bitcoin subscription payment system based on [Core L
 
 The Terminus Pay frontend code is contained within this repo, and the backend server API is stored in [terminus-pay-server](https://github.com/atlantabitdevs/terminus-pay-server).
 
+## Design
+
+Here is the [Figma file](https://www.figma.com/file/TMzx20YWOjQ9LwCDpzM0hq/Terminus-Pay?node-id=0%3A1) for this project.
+
 ## Development
 
 In the project directory, you can run:
