@@ -2,9 +2,15 @@ import React from "react";
 import "./Card.css";
 import {Button} from "../Button";
 
+let classes = "membership border-4 border-black border-solid"
+
+
+
 export const Card = (props) => {
+    if(props.deal.disabled) classes += " disabled"
+    
     return (
-        <div className="border-4 border-black border-solid">
+        <div className={classes}>
             <img
                 className="w-full"
                 src={props.deal.imageSrc}

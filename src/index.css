@@ -16,3 +16,8 @@ body, html, #root {
     background-image: url('../public/computers-bg.jpg');
     @apply bg-center bg-no-repeat bg-cover;
 }
+
+.membership.disabled {
+    opacity: 0.6;
+    border-width: 2px;
+}

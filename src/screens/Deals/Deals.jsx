@@ -25,7 +25,8 @@ export const Deals = () => {
                 'Dedicated desk',
                 '24/7 access',
                 'Book conference rooms'
-            ]
+            ],
+            disabled: true
         },
         {
             id: 2,
@@ -36,7 +37,8 @@ export const Deals = () => {
                 'Pick available desk',
                 '24/7 access',
                 'Book conference rooms'
-            ]
+            ],
+            disabled: false
         },
         {
             id: 1,
@@ -47,7 +49,8 @@ export const Deals = () => {
                 'Pick available desk',
                 'Mon - Fri, 9-5 access',
                 'Stack your sats'
-            ]
+            ],
+            disabled: false
         },
     ];
 
