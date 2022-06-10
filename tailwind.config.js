@@ -12,7 +12,8 @@ module.exports = {
       colors: {
         'term-orange': '#ff9500',
         'term-orange-hover': '#FFB54C',
-        'term-orange-disabled': '#B87B26'
+        'term-orange-disabled': '#B87B26',
+        'term-gray': '#828282'
       }
     },
   },

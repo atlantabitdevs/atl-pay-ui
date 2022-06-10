@@ -4,6 +4,7 @@ import { Box, Button, Paper } from "@mui/material";
 
 export const Card = (props) => {
     return (
+      <div className="border-4 border-black border-solid">
         <Paper className="Card">
             <Box className="container">
                 <img
@@ -22,5 +23,6 @@ export const Card = (props) => {
                 </Button>
             </Box>
         </Paper>
+      </div>
     );
 };
