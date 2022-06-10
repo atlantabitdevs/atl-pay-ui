@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Card } from "../../components/index";
 import "./Deals.css";
 import { useStore } from "../../zustand/store";
-import {BitcoinCircleIcon, ArrowRightIcon} from '@bitcoin-design/bitcoin-icons-react/outline';
 import {Button} from '../../components/Button';
 
 export const Deals = () => {
