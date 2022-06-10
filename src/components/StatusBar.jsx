@@ -2,22 +2,26 @@ export const StatusBar = (props) => {
     const progress = [
         {
             name: "Membership Type",
+            path: 'deals'
         },
         {
             name: "About You",
+            path: 'form'
         },
         {
             name: "Payment schedule",
+            path: 'schedule'
         },
         {
             name: "Checkout",
+            path: 'invoice'
         },
     ];
 
     const DisplayProgress = () => {
         return progress.map((step) => (
             <li className={props.current === step.name ? "current" : null}>
-                <a href="#">{step.name}</a>
+                <a href={'/' + step.path}>{step.name}</a>
             </li>
         ));
     };

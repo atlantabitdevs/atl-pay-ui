@@ -26,7 +26,7 @@ export const Deals = () => {
                 '24/7 access',
                 'Book conference rooms'
             ],
-            disabled: true
+            disabled: false
         },
         {
             id: 2,
