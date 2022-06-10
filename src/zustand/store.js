@@ -7,4 +7,5 @@ export const useStore = create((set) => ({
 
     setDeal: (deal) => set({ deal }),
     setPaymentSchedule: (schedule) => set({ paymentSchedule: schedule }),
+    setForm: (form) => set({ form }),
 }));

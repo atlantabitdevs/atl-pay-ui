@@ -43,7 +43,7 @@ export const Deals = () => {
                 color="warning"
                 className="deals-btn"
             >
-                Done
+                Continue
             </Button>
         </div>
     );
