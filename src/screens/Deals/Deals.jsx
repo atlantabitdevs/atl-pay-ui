@@ -82,7 +82,7 @@ export const Deals = () => {
                 <ArrowRightIcon className="w-8 h-8" />
             </Button>
 
-            <StatusBar />
+            <StatusBar current={"Membership Type"} />
         </div>
     );
 };

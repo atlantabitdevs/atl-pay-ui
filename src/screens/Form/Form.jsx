@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
 import { useStore } from "../../zustand/store";
+import { StatusBar } from "../../components/StatusBar";
 
 export const Form = () => {
     let navigate = useNavigate();
@@ -47,6 +48,7 @@ export const Form = () => {
             <Button variant="contained" onClick={btnPress} color="warning">
                 Continue
             </Button>
+            <StatusBar current={"About You"} />
         </div>
     );
 };
