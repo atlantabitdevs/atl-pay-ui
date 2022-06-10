@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card } from "../../components/index";
 import "./Deals.css";
@@ -15,18 +15,57 @@ export const Deals = () => {
         console.log(store);
     }, [store]);
 
-    let deals = [
+    // let deals = [
+    //     {
+    //         id: 3,
+    //         text: "Core Contrib",
+    //         price: "350",
+    //         imageSrc: "membership-3.jpg",
+    //         descriptions: [
+    //             "Dedicated desk",
+    //             "24/7 access",
+    //             "Book conference rooms",
+    //         ],
+    //         disabled: false,
+    //     },
+    //     {
+    //         id: 2,
+    //         text: "Sovereign",
+    //         price: "150",
+    //         imageSrc: "membership-2.jpg",
+    //         descriptions: [
+    //             "Pick available desk",
+    //             "24/7 access",
+    //             "Book conference rooms",
+    //         ],
+    //         disabled: false,
+    //     },
+    //     {
+    //         id: 1,
+    //         text: "Pleb",
+    //         price: "60",
+    //         imageSrc: "membership-1.jpg",
+    //         descriptions: [
+    //             "Pick available desk",
+    //             "Mon - Fri, 9-5 access",
+    //             "Stack your sats",
+    //         ],
+    //         disabled: false,
+    //     },
+    // ];
+
+    let [deals, setDeals] = useState([
         {
             id: 3,
             text: "Core Contrib",
             price: "350",
             imageSrc: "membership-3.jpg",
             descriptions: [
-                'Dedicated desk',
-                '24/7 access',
-                'Book conference rooms'
+                "Dedicated desk",
+                "24/7 access",
+                "Book conference rooms",
             ],
-            disabled: true
+            disabled: false,
         },
         {
             id: 2,
@@ -34,11 +73,11 @@ export const Deals = () => {
             price: "150",
             imageSrc: "membership-2.jpg",
             descriptions: [
-                'Pick available desk',
-                '24/7 access',
-                'Book conference rooms'
+                "Pick available desk",
+                "24/7 access",
+                "Book conference rooms",
             ],
-            disabled: false
+            disabled: false,
         },
         {
             id: 1,
@@ -46,22 +85,37 @@ export const Deals = () => {
             price: "60",
             imageSrc: "membership-1.jpg",
             descriptions: [
-                'Pick available desk',
-                'Mon - Fri, 9-5 access',
-                'Stack your sats'
+                "Pick available desk",
+                "Mon - Fri, 9-5 access",
+                "Stack your sats",
             ],
-            disabled: false
+            disabled: false,
         },
-    ];
+    ]);
 
-    const selectDeal = (deal) => {
+    const selectDeal = (deal, index) => {
+        setDeals((previous) => {
+            previous.forEach((deal, i) => {
+                if (i !== index) {
+                    deal.disabled = true;
+                } else {
+                    deal.disabled = false;
+                }
+            });
+            return previous;
+        });
+
         store.setDeal(deal);
-        console.log("STORE", store);
     };
 
     const DisplayDeals = () => {
-        return deals.map((deal) => (
-            <Card key={deal.id} deal={deal} selectDeal={selectDeal} />
+        return deals.map((deal, index) => (
+            <Card
+                key={deal.id}
+                deal={deal}
+                selectDeal={selectDeal}
+                index={index}
+            />
         ));
     };
 
