@@ -15,10 +15,9 @@ export const Invoice = () => {
     let URL = "http://localhost:4000/api/v1/terminus/signup";
 
     useEffect(() => {
-        sendRequest();
         const sendRequest = async () => {
-            let tier = store.deal.id;
-            let recurrence = store.paymentSchedule;
+            let tier = store.deal.id.toString();
+            let recurrence = store.paymentSchedule.months;
             let response = await fetch(URL, {
                 method: "POST",
                 headers: {
@@ -30,9 +29,11 @@ export const Invoice = () => {
             setInvoiceString(jsonResponse);
             loading(false);
         };
+        sendRequest();
     }, []);
 
     if (loading) {
+        console.log("Loading");
         return (
             <div>
                 <p>Spinning</p>
@@ -62,10 +63,10 @@ export const Invoice = () => {
                     <h3 className="text-2xl font-bold">Membership Details</h3>
 
                     <ul className="text-xl space-y-2 text-center">
-                        <li>Core Contrib</li>
-                        <li>Alicia Bitcoiner</li>
-                        <li>alicia@atlantabitdevs.org</li>
-                        <li>Subscribe for 3 months</li>
+                        <li>{store.deal.text}</li>
+                        <li>{store.form.nim}</li>
+                        <li>{store.form.email}</li>
+                        <li>{store.paymentSchedule.description}</li>
                     </ul>
                 </div>
             </div>

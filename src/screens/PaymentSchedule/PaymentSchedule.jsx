@@ -30,7 +30,7 @@ export const PaymentSchedule = () => {
             months: "6",
             description: "Subscribe for 6 months",
             subdescription: "5% off",
-            disabled: true,
+            disabled: false,
         },
     ]);
 
