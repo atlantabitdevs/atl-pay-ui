@@ -81,7 +81,7 @@ export const Deals = () => {
     };
 
     return (
-        <div className="h-full flex flex-col space-y-8 justify-between align-center items-center p-16">
+        <div className="page">
             <h2 className="text-4xl text-center">
                 What kind of membership would you like?
             </h2>
