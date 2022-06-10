@@ -1,0 +1,18 @@
+.FormContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fields {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.field {
+    margin-top: 20px;
+    width: 25em;
+}

@@ -1,0 +1,29 @@
+.Card {
+    margin: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 20px;
+    justify-content: center;
+    background-color: black;
+    margin: 10px;
+    /* padding: 30px; */
+}
+
+.card-image {
+    width: 250px;
+    height: 200px;
+}
+
+.card-text {
+    color: aliceblue;
+    text-align: center;
+}
+
+.card-btn {
+    text-align: center;
+}

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
+body,
+html,
+#root {
+    @apply h-full;
+}
+
+.page {
+    @apply h-full flex flex-col space-y-8 justify-between items-center p-16;
+}
+
+.status-bar .current {
+    @apply text-black;
+}
+
+.computers {
+    background-image: url("../public/computers-bg.jpg");
+    @apply bg-center bg-no-repeat bg-cover;
+}
+
+.membership.disabled {
+    opacity: 0.6;
+    border-width: 2px;
+}
+
+.recurrence.disabled {
+    opacity: 0.6;
+    border-width: 2px;
+}
+
+.success, .pending {
+    @apply flex flex-col space-y-4;
+}
