@@ -8,6 +8,10 @@ body, html, #root {
     @apply h-full;
 }
 
+.page {
+    @apply h-full flex flex-col space-y-8 justify-between items-center p-16;
+}
+
 .status-bar .current {
     @apply text-black;
 }

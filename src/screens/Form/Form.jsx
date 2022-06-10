@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Button, TextField } from "@mui/material";
+import {Button} from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
 import { useStore } from "../../zustand/store";
 import { StatusBar } from "../../components/StatusBar";
+import {InputText} from "../../components/InputText";
 
 export const Form = () => {
     let navigate = useNavigate();
@@ -20,34 +21,30 @@ export const Form = () => {
     };
 
     return (
-        <div className="FormContainer">
-            <div className="fields">
-                {/* <TextField
-                    id="outlined-basic"
-                    label="Name"
-                    variant="outlined"
-                    className="field"
-                    onChange={(e) => setName(e.target.value)}
-                /> */}
-                <TextField
-                    id="outlined-basic"
-                    label="Name/Nim"
-                    variant="outlined"
-                    className="field"
+        <div className="page w-full">
+            <h2 className="text-4xl text-center">
+                Tell us about yourself<br /><em className="text-xl">(but not too much)</em>
+            </h2>
+            
+            <div className="max-w-xl w-full mx-auto flex flex-col space-y-8">
+                <InputText
+                    placeholder="ATLien"
+                    label="Name / Nym"
                     onChange={(e) => setNim(e.target.value)}
                 />
-                <TextField
-                    id="outlined-basic"
-                    label="Email"
-                    variant="outlined"
-                    className="field"
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-            </div>
 
-            <Button variant="contained" onClick={btnPress} color="warning">
-                Continue
-            </Button>
+                <InputText
+                    placeholder="andre3000@outkast.com"
+                    label="Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="email"
+                />
+
+                <Button variant="contained" onClick={btnPress} color="warning">
+                    Continue
+                </Button>
+            </div>
+            
             <StatusBar current={"About You"} />
         </div>
     );
