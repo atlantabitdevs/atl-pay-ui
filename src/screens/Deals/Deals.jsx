@@ -45,6 +45,9 @@ export const Deals = () => {
             >
                 Continue
             </Button>
+          
+          
+          <p className="text-6xl">Tailwind Test</p>
         </div>
     );
 };
