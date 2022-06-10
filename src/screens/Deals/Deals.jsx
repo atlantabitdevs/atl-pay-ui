@@ -15,45 +15,6 @@ export const Deals = () => {
         console.log(store);
     }, [store]);
 
-    // let deals = [
-    //     {
-    //         id: 3,
-    //         text: "Core Contrib",
-    //         price: "350",
-    //         imageSrc: "membership-3.jpg",
-    //         descriptions: [
-    //             "Dedicated desk",
-    //             "24/7 access",
-    //             "Book conference rooms",
-    //         ],
-    //         disabled: false,
-    //     },
-    //     {
-    //         id: 2,
-    //         text: "Sovereign",
-    //         price: "150",
-    //         imageSrc: "membership-2.jpg",
-    //         descriptions: [
-    //             "Pick available desk",
-    //             "24/7 access",
-    //             "Book conference rooms",
-    //         ],
-    //         disabled: false,
-    //     },
-    //     {
-    //         id: 1,
-    //         text: "Pleb",
-    //         price: "60",
-    //         imageSrc: "membership-1.jpg",
-    //         descriptions: [
-    //             "Pick available desk",
-    //             "Mon - Fri, 9-5 access",
-    //             "Stack your sats",
-    //         ],
-    //         disabled: false,
-    //     },
-    // ];
-
     let [deals, setDeals] = useState([
         {
             id: 3,
