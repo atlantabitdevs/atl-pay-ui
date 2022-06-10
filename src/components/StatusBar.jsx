@@ -1,3 +1,5 @@
+import {BitcoinCircleIcon} from "@bitcoin-design/bitcoin-icons-react/outline";
+
 export const StatusBar = (props) => {
     const progress = [
         {
@@ -28,22 +30,13 @@ export const StatusBar = (props) => {
 
     return (
         <div className="status-bar flex flex-row space-x-16 items-center justify-center">
-            <a href="/" className="uppercase tracking-widest font-bold text-lg text-term-gray">Terminus</a>
+            <a href="/" className="uppercase tracking-widest font-bold text-lg text-term-gray flex flex-row space-x-2 items-center">
+                <BitcoinCircleIcon className="w-8 h-8" />
+                <span>Terminus</span>
+            </a>
             
             <ol className="flex flex-row space-x-12 text-lg text-term-gray list-decimal">
                 <DisplayProgress />
-                {/* <li className="current">
-                    <a href="#">Membership Type</a>
-                </li>
-                <li>
-                    <a href="#">About You</a>
-                </li>
-                <li>
-                    <a href="#">Payment schedule</a>
-                </li>
-                <li>
-                    <a href="#">Checkout</a>
-                </li> */}
             </ol>
         </div>
     );
