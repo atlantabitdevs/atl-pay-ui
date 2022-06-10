@@ -40,7 +40,7 @@ export const Form = () => {
                     type="email"
                 />
 
-                <Button variant="contained" onClick={btnPress} color="warning">
+                <Button variant="contained" onClick={btnPress} color="warning" disabled={!nim || !email}>
                     Continue
                 </Button>
             </div>
