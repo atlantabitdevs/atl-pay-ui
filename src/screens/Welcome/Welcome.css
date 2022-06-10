@@ -1,0 +1,14 @@
+.dealsScreenContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dealsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.deals-btn {
+    margin-top: 30px;
+}

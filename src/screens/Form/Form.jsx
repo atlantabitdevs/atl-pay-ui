@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
@@ -7,30 +7,30 @@ import { useStore } from "../../zustand/store";
 export const Form = () => {
     let navigate = useNavigate();
 
-    const [name, setName] = useState("");
+    // const [name, setName] = useState("");
     const [nim, setNim] = useState("");
     const [email, setEmail] = useState("");
 
     const store = useStore((state) => state);
 
     const btnPress = () => {
-        store.setForm({ name, nim, email });
+        store.setForm({ nim, email });
         navigate("/schedule");
     };
 
     return (
         <div className="FormContainer">
             <div className="fields">
-                <TextField
+                {/* <TextField
                     id="outlined-basic"
                     label="Name"
                     variant="outlined"
                     className="field"
                     onChange={(e) => setName(e.target.value)}
-                />
+                /> */}
                 <TextField
                     id="outlined-basic"
-                    label="Nim"
+                    label="Name/Nim"
                     variant="outlined"
                     className="field"
                     onChange={(e) => setNim(e.target.value)}
