@@ -27,7 +27,9 @@ export const StatusBar = (props) => {
     };
 
     return (
-        <div className="status-bar">
+        <div className="status-bar flex flex-row space-x-16 items-center justify-center">
+            <a href="/" className="uppercase tracking-widest font-bold text-lg text-term-gray">Terminus</a>
+            
             <ol className="flex flex-row space-x-12 text-lg text-term-gray list-decimal">
                 <DisplayProgress />
                 {/* <li className="current">
