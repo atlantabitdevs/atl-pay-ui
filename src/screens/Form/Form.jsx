@@ -13,16 +13,9 @@ export const Form = () => {
 
     const store = useStore((state) => state);
 
-    useEffect(() => {
-        console.log(store);
-    }, [store]);
-
     const btnPress = () => {
-        // console.log("Name", name);
-        // console.log("NIM", nim);
-        // console.log("Email", email);
         store.setForm({ name, nim, email });
-        // navigate("/schedule");
+        navigate("/schedule");
     };
 
     return (
