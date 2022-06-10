@@ -77,14 +77,7 @@ export const Invoice = () => {
                     </p>
 
                     <div className="flex flex-col space-y-8 justify-center items-center">
-                        <iframe
-                            src="https://giphy.com/embed/fimJbiI2SiGx5JfOyP"
-                            width="480"
-                            height="360"
-                            frameBorder="0"
-                            className="giphy-embed"
-                            allowFullScreen
-                        ></iframe>
+                        <img src="success.gif" alt="" />
                     </div>
 
                     <br />
