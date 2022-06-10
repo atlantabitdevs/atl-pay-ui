@@ -23,7 +23,7 @@ export const Invoice = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ recurrence, tier }),
+                body: JSON.stringify({ recurrence, tier, info: {nameNym: store.form.nim, email: store.form.email} }),
             });
             const jsonResponse = await response.json();
             setInvoiceString(jsonResponse);
