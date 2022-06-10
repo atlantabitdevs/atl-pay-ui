@@ -22,7 +22,7 @@ export const Welcome = () => {
                     Congratulations, pleb.<br />You’re coming to <strong>Terminus</strong>.
                 </h1>
                 
-                <ol className="text-2xl">
+                <ol className="text-2xl space-y-4">
                     <li>Use lightning fast internet</li>
                     <li>Enjoy coffee and snacks</li>
                     <li>Work with ATL bitcoiners</li>
